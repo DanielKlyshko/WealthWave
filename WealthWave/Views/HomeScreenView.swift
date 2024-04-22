@@ -1,11 +1,8 @@
 import UIKit
 
-class ViewController: UIViewController {
-
+class HomeScreenView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = .green
     }
-
 }
-

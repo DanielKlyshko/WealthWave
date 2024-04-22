@@ -9,19 +9,29 @@
 /* Begin PBXBuildFile section */
 		1C43B74F2BCC631A00161D6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B74E2BCC631A00161D6E /* AppDelegate.swift */; };
 		1C43B7512BCC631A00161D6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B7502BCC631A00161D6E /* SceneDelegate.swift */; };
-		1C43B7532BCC631A00161D6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B7522BCC631A00161D6E /* ViewController.swift */; };
 		1C43B7582BCC631C00161D6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C43B7572BCC631C00161D6E /* Assets.xcassets */; };
 		1C43B75B2BCC631C00161D6E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1C43B75A2BCC631C00161D6E /* Base */; };
+		1C43B7662BD03C8600161D6E /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B7652BD03C8600161D6E /* TabBarView.swift */; };
+		1C43B7682BD03C9D00161D6E /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B7672BD03C9D00161D6E /* TabBarPresenter.swift */; };
+		1C43B76A2BD0440900161D6E /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B7692BD0440900161D6E /* HomeScreenView.swift */; };
+		1C43B76C2BD0443600161D6E /* HomeScreePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B76B2BD0443600161D6E /* HomeScreePresenter.swift */; };
+		1C43B76E2BD0446F00161D6E /* TransListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B76D2BD0446F00161D6E /* TransListView.swift */; };
+		1C43B7702BD0447F00161D6E /* TransViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B76F2BD0447F00161D6E /* TransViewPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1C43B74B2BCC631A00161D6E /* WealthWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WealthWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C43B74E2BCC631A00161D6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C43B7502BCC631A00161D6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1C43B7522BCC631A00161D6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1C43B7572BCC631C00161D6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C43B75A2BCC631C00161D6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C43B75C2BCC631C00161D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C43B7652BD03C8600161D6E /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		1C43B7672BD03C9D00161D6E /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		1C43B7692BD0440900161D6E /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		1C43B76B2BD0443600161D6E /* HomeScreePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreePresenter.swift; sourceTree = "<group>"; };
+		1C43B76D2BD0446F00161D6E /* TransListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransListView.swift; sourceTree = "<group>"; };
+		1C43B76F2BD0447F00161D6E /* TransViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransViewPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,43 @@
 		1C43B74D2BCC631A00161D6E /* WealthWave */ = {
 			isa = PBXGroup;
 			children = (
+				1C43B7642BD0387B00161D6E /* Models */,
+				1C43B7632BD0386600161D6E /* Presenters */,
+				1C43B7622BD0385E00161D6E /* Views */,
 				1C43B74E2BCC631A00161D6E /* AppDelegate.swift */,
 				1C43B7502BCC631A00161D6E /* SceneDelegate.swift */,
-				1C43B7522BCC631A00161D6E /* ViewController.swift */,
 				1C43B7572BCC631C00161D6E /* Assets.xcassets */,
 				1C43B7592BCC631C00161D6E /* LaunchScreen.storyboard */,
 				1C43B75C2BCC631C00161D6E /* Info.plist */,
 			);
 			path = WealthWave;
+			sourceTree = "<group>";
+		};
+		1C43B7622BD0385E00161D6E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C43B7652BD03C8600161D6E /* TabBarView.swift */,
+				1C43B7692BD0440900161D6E /* HomeScreenView.swift */,
+				1C43B76D2BD0446F00161D6E /* TransListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1C43B7632BD0386600161D6E /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				1C43B7672BD03C9D00161D6E /* TabBarPresenter.swift */,
+				1C43B76B2BD0443600161D6E /* HomeScreePresenter.swift */,
+				1C43B76F2BD0447F00161D6E /* TransViewPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		1C43B7642BD0387B00161D6E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C43B7532BCC631A00161D6E /* ViewController.swift in Sources */,
+				1C43B7682BD03C9D00161D6E /* TabBarPresenter.swift in Sources */,
+				1C43B7702BD0447F00161D6E /* TransViewPresenter.swift in Sources */,
+				1C43B76A2BD0440900161D6E /* HomeScreenView.swift in Sources */,
+				1C43B76C2BD0443600161D6E /* HomeScreePresenter.swift in Sources */,
 				1C43B74F2BCC631A00161D6E /* AppDelegate.swift in Sources */,
+				1C43B76E2BD0446F00161D6E /* TransListView.swift in Sources */,
+				1C43B7662BD03C8600161D6E /* TabBarView.swift in Sources */,
 				1C43B7512BCC631A00161D6E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
