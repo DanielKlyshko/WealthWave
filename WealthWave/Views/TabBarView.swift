@@ -2,50 +2,50 @@ import UIKit
 
 class TabBarView: UITabBarController, UITabBarControllerDelegate {
     
-    // Свойство для хранения ссылки на круглый UIView
-    private var circleView: UIView?
+    // MARK: - Properties
+    
+    var circleView = UIView()
+    
+    // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // MARK: Generate Tab Bar
+        
         generateTabBar()
         
         tabBar.tintColor = .white
         tabBar.unselectedItemTintColor = UIColor(red: 31/255, green: 31/255, blue: 31/255, alpha: 1)
-
+        
+        // MARK: Create Circle View
+        
+        circleView.backgroundColor = UIColor(red: 31/255, green: 31/255, blue: 31/255, alpha: 1)
+        circleView.frame = CGRect(x: 13, y: -15, width: 68, height: 68)
+        circleView.layer.cornerRadius = circleView.frame.width / 2
+        
+        // MARK: Set Delegate
         
         self.delegate = self
         
-        // Добавляем круглый фон к выбранному айтему таббара при загрузке представления
+        // MARK: Add Circle View to Selected Tab
+        
         if let selectedTab = tabBar.subviews.first as? UIControl {
-            let circleView = UIView(frame: CGRect(x: 13, y: -15, width: 68, height: 68))
-            circleView.backgroundColor = UIColor(red: 31/255, green: 31/255, blue: 31/255, alpha: 1)
-            circleView.layer.cornerRadius = circleView.frame.width / 2
             selectedTab.addSubview(circleView)
-            
-            // Сохраняем ссылку на круглый UIView
-            self.circleView = circleView
         }
     }
     
+    // MARK: - Delegate Methods
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        // Удаляем старый круг, если он есть
-        circleView?.removeFromSuperview()
-        
-        // Получаем индекс выбранного элемента таббара
+        circleView.removeFromSuperview()
         let selectedIndex = tabBarController.selectedIndex
-        
-        // Добавляем круг в выбранный элемент таббара
         if let selectedTab = tabBar.subviews[selectedIndex + 1] as? UIControl {
-            let circleView = UIView(frame: CGRect(x: 13, y: -15, width: 68, height: 68))
-            circleView.backgroundColor = UIColor(red: 31/255, green: 31/255, blue: 31/255, alpha: 1)
-            circleView.layer.cornerRadius = circleView.frame.width / 2
             selectedTab.addSubview(circleView)
-            
-            // Сохраняем ссылку на круглый UIView
-            self.circleView = circleView
         }
     }
+    
+    // MARK: - Private Methods
     
     private func generateTabBar() {
         viewControllers = [
@@ -69,3 +69,4 @@ class TabBarView: UITabBarController, UITabBarControllerDelegate {
         return viewController
     }
 }
+
