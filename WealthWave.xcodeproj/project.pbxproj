@@ -15,8 +15,8 @@
 		1C43B7682BD03C9D00161D6E /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B7672BD03C9D00161D6E /* TabBarPresenter.swift */; };
 		1C43B76A2BD0440900161D6E /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B7692BD0440900161D6E /* HomeScreenView.swift */; };
 		1C43B76C2BD0443600161D6E /* HomeScreePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B76B2BD0443600161D6E /* HomeScreePresenter.swift */; };
-		1C43B76E2BD0446F00161D6E /* TransListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B76D2BD0446F00161D6E /* TransListView.swift */; };
-		1C43B7702BD0447F00161D6E /* TransViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B76F2BD0447F00161D6E /* TransViewPresenter.swift */; };
+		1C43B76E2BD0446F00161D6E /* TransactionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B76D2BD0446F00161D6E /* TransactionsListView.swift */; };
+		1C43B7702BD0447F00161D6E /* TransactionsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B76F2BD0447F00161D6E /* TransactionsListPresenter.swift */; };
 		1C43B7722BD845B800161D6E /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B7712BD845B800161D6E /* Builder.swift */; };
 		1C43B7872BDABB4100161D6E /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C43B7752BDABB4100161D6E /* Montserrat-Bold.ttf */; };
 		1C43B78F2BDABB4100161D6E /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C43B77D2BDABB4100161D6E /* Montserrat-ExtraBold.ttf */; };
@@ -35,8 +35,8 @@
 		1C43B7672BD03C9D00161D6E /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
 		1C43B7692BD0440900161D6E /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		1C43B76B2BD0443600161D6E /* HomeScreePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreePresenter.swift; sourceTree = "<group>"; };
-		1C43B76D2BD0446F00161D6E /* TransListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransListView.swift; sourceTree = "<group>"; };
-		1C43B76F2BD0447F00161D6E /* TransViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransViewPresenter.swift; sourceTree = "<group>"; };
+		1C43B76D2BD0446F00161D6E /* TransactionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsListView.swift; sourceTree = "<group>"; };
+		1C43B76F2BD0447F00161D6E /* TransactionsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsListPresenter.swift; sourceTree = "<group>"; };
 		1C43B7712BD845B800161D6E /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		1C43B7752BDABB4100161D6E /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		1C43B77D2BDABB4100161D6E /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 			children = (
 				1C43B7652BD03C8600161D6E /* TabBarView.swift */,
 				1C43B7692BD0440900161D6E /* HomeScreenView.swift */,
-				1C43B76D2BD0446F00161D6E /* TransListView.swift */,
+				1C43B76D2BD0446F00161D6E /* TransactionsListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -102,7 +102,7 @@
 			children = (
 				1C43B7672BD03C9D00161D6E /* TabBarPresenter.swift */,
 				1C43B76B2BD0443600161D6E /* HomeScreePresenter.swift */,
-				1C43B76F2BD0447F00161D6E /* TransViewPresenter.swift */,
+				1C43B76F2BD0447F00161D6E /* TransactionsListPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -209,12 +209,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C43B7682BD03C9D00161D6E /* TabBarPresenter.swift in Sources */,
-				1C43B7702BD0447F00161D6E /* TransViewPresenter.swift in Sources */,
+				1C43B7702BD0447F00161D6E /* TransactionsListPresenter.swift in Sources */,
 				1C43B76A2BD0440900161D6E /* HomeScreenView.swift in Sources */,
 				1C43B76C2BD0443600161D6E /* HomeScreePresenter.swift in Sources */,
 				1C43B74F2BCC631A00161D6E /* AppDelegate.swift in Sources */,
 				1C43B7722BD845B800161D6E /* Builder.swift in Sources */,
-				1C43B76E2BD0446F00161D6E /* TransListView.swift in Sources */,
+				1C43B76E2BD0446F00161D6E /* TransactionsListView.swift in Sources */,
 				1C43B7662BD03C8600161D6E /* TabBarView.swift in Sources */,
 				1C43B7512BCC631A00161D6E /* SceneDelegate.swift in Sources */,
 			);
