@@ -14,7 +14,7 @@ class TabBarView: UITabBarController {
         
         view.backgroundColor = .red
         
-        tabBar.tintColor = .white
+        tabBar.tintColor = UIColor(red: 66/255, green: 120/255, blue: 255/255, alpha: 1)
         tabBar.unselectedItemTintColor = UIColor(red: 31/255, green: 31/255, blue: 31/255, alpha: 1)
         
         circleView.backgroundColor = UIColor(red: 31/255, green: 31/255, blue: 31/255, alpha: 1)
