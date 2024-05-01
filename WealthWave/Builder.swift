@@ -16,6 +16,14 @@ class Builder: BuilderProtocol {
         return signInView
     }
     
+    static func createSignUpViewController() -> UIViewController {
+        let signUpView = SignUpView()
+        let signUpPresenter = SignUpPresenter(view: signUpView)
+        
+        signUpView.presenter = signUpPresenter
+        return signUpView
+    }
+    
     static func createTabBarController() -> UIViewController {
         let tabBarView = TabBarView()
         let tabBarPresenter = TabBarPresenter(view: tabBarView)

@@ -1,24 +1,24 @@
 import UIKit
 import FirebaseAuth
 
-protocol SignInPresenterProtocol: AnyObject {
+protocol SignUpPresenterProtocol: AnyObject {
     func signInButtonTapped()
     func signUpButtonTapped()
 }
 
-class SignInPresenter {
-    unowned let view: SignInView
+class SignUpPresenter {
+    unowned let view: SignUpView
     
-    init(view: SignInView) {
+    init(view: SignUpView) {
         self.view = view
     }
 }
 
-extension SignInPresenter: SignInPresenterProtocol {
-    func signInButtonTapped() {
+extension SignUpPresenter: SignUpPresenterProtocol {
+    func signUpButtonTapped() {
         let email = view.loginTextField.text ?? ""
         let password = view.passwordTextField.text ?? ""
-        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+        Auth.auth().createUser(withEmail: email, password: password) { result, error in
             if let result = result {
                 print(result)
             } else {
@@ -27,10 +27,10 @@ extension SignInPresenter: SignInPresenterProtocol {
         }
     }
     
-    
-    func signUpButtonTapped() {
+    func signInButtonTapped() {
 
     }
-    
 }
+
+    
 
