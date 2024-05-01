@@ -31,6 +31,10 @@
 		1C71899C2BE2443100BD27B3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C71899B2BE2443100BD27B3 /* SignUpView.swift */; };
 		1C71899E2BE272B600BD27B3 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C71899D2BE272B600BD27B3 /* TransactionTableViewCell.swift */; };
 		1C7189A42BE27A2700BD27B3 /* TransactionCellDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189A32BE27A2700BD27B3 /* TransactionCellDataModel.swift */; };
+		1C7189A62BE2EB3800BD27B3 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189A52BE2EB3800BD27B3 /* SignInModel.swift */; };
+		1C7189A82BE2EB4800BD27B3 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189A72BE2EB4800BD27B3 /* SignUpModel.swift */; };
+		1C7189AA2BE2EC7700BD27B3 /* CabinetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189A92BE2EC7700BD27B3 /* CabinetView.swift */; };
+		1C7189AC2BE2EC8600BD27B3 /* CabinetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189AB2BE2EC8600BD27B3 /* CabinetPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +62,10 @@
 		1C71899B2BE2443100BD27B3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		1C71899D2BE272B600BD27B3 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		1C7189A32BE27A2700BD27B3 /* TransactionCellDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellDataModel.swift; sourceTree = "<group>"; };
+		1C7189A52BE2EB3800BD27B3 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
+		1C7189A72BE2EB4800BD27B3 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
+		1C7189A92BE2EC7700BD27B3 /* CabinetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetView.swift; sourceTree = "<group>"; };
+		1C7189AB2BE2EC8600BD27B3 /* CabinetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +124,7 @@
 				1C43B7692BD0440900161D6E /* HomeScreenView.swift */,
 				1C43B76D2BD0446F00161D6E /* TransactionsListView.swift */,
 				1C71899D2BE272B600BD27B3 /* TransactionTableViewCell.swift */,
+				1C7189A92BE2EC7700BD27B3 /* CabinetView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,6 +137,7 @@
 				1C43B7672BD03C9D00161D6E /* TabBarPresenter.swift */,
 				1C43B76B2BD0443600161D6E /* HomeScreePresenter.swift */,
 				1C43B76F2BD0447F00161D6E /* TransactionsListPresenter.swift */,
+				1C7189AB2BE2EC8600BD27B3 /* CabinetPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -135,6 +145,8 @@
 		1C43B7642BD0387B00161D6E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1C7189A52BE2EB3800BD27B3 /* SignInModel.swift */,
+				1C7189A72BE2EB4800BD27B3 /* SignUpModel.swift */,
 				1C7189A32BE27A2700BD27B3 /* TransactionCellDataModel.swift */,
 			);
 			path = Models;
@@ -250,10 +262,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C43B7682BD03C9D00161D6E /* TabBarPresenter.swift in Sources */,
+				1C7189AA2BE2EC7700BD27B3 /* CabinetView.swift in Sources */,
 				1C43B7702BD0447F00161D6E /* TransactionsListPresenter.swift in Sources */,
+				1C7189A82BE2EB4800BD27B3 /* SignUpModel.swift in Sources */,
 				1C43B76A2BD0440900161D6E /* HomeScreenView.swift in Sources */,
 				1C43B76C2BD0443600161D6E /* HomeScreePresenter.swift in Sources */,
 				1C71899E2BE272B600BD27B3 /* TransactionTableViewCell.swift in Sources */,
+				1C7189A62BE2EB3800BD27B3 /* SignInModel.swift in Sources */,
+				1C7189AC2BE2EC8600BD27B3 /* CabinetPresenter.swift in Sources */,
 				1C43B74F2BCC631A00161D6E /* AppDelegate.swift in Sources */,
 				1C7189982BE22F0B00BD27B3 /* SignInPresenter.swift in Sources */,
 				1C71899A2BE2441C00BD27B3 /* SignUpPresenter.swift in Sources */,

@@ -5,6 +5,7 @@ class TransactionTableViewCell: UITableViewCell {
     private var cellBGView = UIView()
     private var transactioNameLabel = UILabel()
     private var transactionCountLabel = UILabel()
+    private var transactionDateLabel = UILabel()
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -13,6 +14,7 @@ class TransactionTableViewCell: UITableViewCell {
         addSubview(cellBGView)
         cellBGView.addSubview(transactioNameLabel)
         cellBGView.addSubview(transactionCountLabel)
+        cellBGView.addSubview(transactionDateLabel)
         
         constraintsSettings()
         uiSettings()
@@ -28,11 +30,15 @@ class TransactionTableViewCell: UITableViewCell {
         
         transactioNameLabel.translatesAutoresizingMaskIntoConstraints = false
         transactioNameLabel.leadingAnchor.constraint(equalTo: cellBGView.leadingAnchor, constant: 10).isActive = true
-        transactioNameLabel.centerYAnchor.constraint(equalTo: cellBGView.centerYAnchor).isActive = true
+        transactioNameLabel.bottomAnchor.constraint(equalTo: cellBGView.bottomAnchor, constant: -8).isActive = true
         
         transactionCountLabel.translatesAutoresizingMaskIntoConstraints = false
         transactionCountLabel.trailingAnchor.constraint(equalTo: cellBGView.trailingAnchor, constant: -10).isActive = true
         transactionCountLabel.centerYAnchor.constraint(equalTo: cellBGView.centerYAnchor).isActive = true
+        
+        transactionDateLabel.translatesAutoresizingMaskIntoConstraints = false
+        transactionDateLabel.topAnchor.constraint(equalTo: cellBGView.topAnchor, constant: 8).isActive = true
+        transactionDateLabel.leadingAnchor.constraint(equalTo: cellBGView.leadingAnchor, constant: 10).isActive = true
     }
     
     private func uiSettings() {
@@ -46,12 +52,21 @@ class TransactionTableViewCell: UITableViewCell {
         transactioNameLabel.textColor = .black
         
         transactionCountLabel.font = UIFont(name: "Montserrat-SemiBold", size: 20)
-        transactionCountLabel.textColor = .systemRed
+        
+        transactionDateLabel.font = UIFont(name: "Montserrat-SemiBold", size: 12)
+        transactionDateLabel.textColor = .lightGray
+
     }
     
     func transactionCellConfig(_ transaction: TransactionsItem) {
         transactioNameLabel.text = transaction.transName
+        if transaction.transCount >= 0 {
+            transactionCountLabel.textColor = .systemGreen
+        } else {
+            transactionCountLabel.textColor = .systemRed
+        }
         transactionCountLabel.text = "\(transaction.transCount)"
+        transactionDateLabel.text = transaction.transDate
     }
     
     required init?(coder: NSCoder) {

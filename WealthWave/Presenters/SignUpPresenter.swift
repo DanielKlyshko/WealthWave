@@ -2,7 +2,6 @@ import UIKit
 import FirebaseAuth
 
 protocol SignUpPresenterProtocol: AnyObject {
-    func signInButtonTapped()
     func signUpButtonTapped()
 }
 
@@ -25,11 +24,10 @@ extension SignUpPresenter: SignUpPresenterProtocol {
                 print(error)
             }
         }
+        UINavigationController(rootViewController: Builder.createTabBarController()).modalPresentationStyle = .fullScreen
+        self.view.present(UINavigationController(rootViewController: Builder.createTabBarController()), animated: true, completion: nil)
     }
     
-    func signInButtonTapped() {
-
-    }
 }
 
     

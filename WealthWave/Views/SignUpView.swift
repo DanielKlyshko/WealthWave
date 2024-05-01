@@ -24,8 +24,6 @@ final class SignUpView: UIViewController {
     private var passwordIconImage = UIImageView()
     
     private var signUpButton = UIButton()
-    private var signInLabel = UILabel()
-    private var signInButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +44,6 @@ final class SignUpView: UIViewController {
         passwordIconBGCircleView.addSubview(passwordIconImage)
         
         view.addSubview(signUpButton)
-        view.addSubview(signInLabel)
-        view.addSubview(signInButton)
         
         
         constraintsSetting()
@@ -120,13 +116,6 @@ final class SignUpView: UIViewController {
         signUpButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         signUpButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        signInLabel.translatesAutoresizingMaskIntoConstraints = false
-        signInLabel.topAnchor.constraint(equalTo: signUpButton.bottomAnchor, constant: 20).isActive = true
-        signInLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -40).isActive = true
-        
-        signInButton.translatesAutoresizingMaskIntoConstraints = false
-        signInButton.leadingAnchor.constraint(equalTo: signInLabel.trailingAnchor, constant: 10).isActive = true
-        signInButton.centerYAnchor.constraint(equalTo: signInLabel.centerYAnchor).isActive = true
     }
     
     private func uiSettings() {
@@ -179,20 +168,9 @@ final class SignUpView: UIViewController {
         signUpButton.setTitle("Sign Up", for: .normal)
         signUpButton.titleLabel?.font = UIFont(name: "Montserrat-SemiBold", size: 14)
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
-        
-        signInLabel.text = "Have an account?"
-        signInLabel.font = UIFont(name: "Montserrat-Regular", size: 14)
-        signInLabel.textColor = UIColor(red: 31/255, green: 31/255, blue: 31/255, alpha: 1)
-        
-        signInButton.setTitle("Sign In", for: .normal)
-        signInButton.titleLabel?.font = UIFont(name: "Montserrat-Bold", size: 14)
-        signInButton.setTitleColor(UIColor(red: 66/255, green: 120/255, blue: 255/255, alpha: 1), for: .normal)
-        signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
+
     }
     
-    @objc private func signInButtonTapped(_ sender: UIButton) {
-        presenter.signInButtonTapped()
-    }
     
     @objc private func signUpButtonTapped(_ sender: UIButton) {
         presenter.signUpButtonTapped()

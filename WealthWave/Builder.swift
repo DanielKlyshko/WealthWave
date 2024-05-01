@@ -13,7 +13,7 @@ class Builder: BuilderProtocol {
         let signInPresenter = SignInPresenter(view: signInView)
         
         signInView.presenter = signInPresenter
-        return signInView
+        return UINavigationController(rootViewController: signInView)
     }
     
     static func createSignUpViewController() -> UIViewController {
@@ -46,5 +46,13 @@ class Builder: BuilderProtocol {
         
         transactionsListView.presenter = transactionsListPresenter
         return transactionsListView
+    }
+    
+    static func createCabinetViewController() -> UIViewController {
+        let cabinetView = CabinetView()
+        let cabinetPresenter = CabinetPresenter(view: cabinetView)
+        
+        cabinetView.presenter = cabinetPresenter
+        return cabinetView
     }
 }

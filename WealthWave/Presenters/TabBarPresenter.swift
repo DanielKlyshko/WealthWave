@@ -22,10 +22,10 @@ extension TabBarPresenter: TabBarPresenterProtocol {
         transactionsList.tabBarItem.image = UIImage(named: "listIcon")
         let graphList = Builder.createTransactionsListViewController()
         graphList.tabBarItem.image = UIImage(named: "graphIcon")
-        let userPage = Builder.createHomeScreenViewController()
-        userPage.tabBarItem.image = UIImage(named: "userIcon")
+        let cabinetPage = Builder.createCabinetViewController()
+        cabinetPage.tabBarItem.image = UIImage(named: "userIcon")
          
-        self.view.setControllers(controllers: [homeScreen, transactionsList, graphList, userPage])
+        self.view.setControllers(controllers: [homeScreen, transactionsList, graphList, cabinetPage])
     }
 }
 

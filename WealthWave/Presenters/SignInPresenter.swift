@@ -25,11 +25,16 @@ extension SignInPresenter: SignInPresenterProtocol {
                 print(error)
             }
         }
+        
+        let vc = Builder.createTabBarController()
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        self.view.present(nav, animated: false, completion: nil)
     }
     
     
     func signUpButtonTapped() {
-
+        self.view.navigationController?.pushViewController(SignUpView(), animated: true)
     }
     
 }
