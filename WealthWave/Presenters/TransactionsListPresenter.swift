@@ -1,13 +1,13 @@
 import UIKit
 
 protocol TransactionsListPresenterProtocol: AnyObject {
-    init(view: TransactionsListViewProtocol)
+    
 }
 
 class TransactionsListPresenter {
-    weak var view: TransactionsListViewProtocol?
+    unowned let view: TransactionsListView
     
-    required init(view: TransactionsListViewProtocol) {
+    init(view: TransactionsListView) {
         self.view = view
     }
 }

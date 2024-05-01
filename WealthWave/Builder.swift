@@ -8,6 +8,14 @@ protocol BuilderProtocol {
 
 class Builder: BuilderProtocol {
     
+    static func createSignInViewController() -> UIViewController {
+        let signInView = SignInView()
+        let signInPresenter = SignInPresenter(view: signInView)
+        
+        signInView.presenter = signInPresenter
+        return signInView
+    }
+    
     static func createTabBarController() -> UIViewController {
         let tabBarView = TabBarView()
         let tabBarPresenter = TabBarPresenter(view: tabBarView)

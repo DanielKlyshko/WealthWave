@@ -1,14 +1,13 @@
 import UIKit
 
 protocol TabBarPresenterProtocol: AnyObject {
-    init(view: TabBarViewProtocol)
     func buildTabBar()
 }
 
 class TabBarPresenter {
-    weak var view: TabBarViewProtocol?
+    unowned let view: TabBarView
     
-    required init(view: TabBarViewProtocol) {
+    init(view: TabBarView) {
         self.view = view
         self.buildTabBar()
     }
@@ -26,7 +25,7 @@ extension TabBarPresenter: TabBarPresenterProtocol {
         let userPage = Builder.createHomeScreenViewController()
         userPage.tabBarItem.image = UIImage(named: "userIcon")
          
-        self.view?.setControllers(controllers: [homeScreen, transactionsList, graphList, userPage])
+        self.view.setControllers(controllers: [homeScreen, transactionsList, graphList, userPage])
     }
 }
 

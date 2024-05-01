@@ -1,15 +1,13 @@
 import UIKit
 
 protocol HomeScreenPresenterProtocol: AnyObject {
-    init(view: HomeScreenViewProtocol)
+
 }
 
-
-
 class HomeScreePresenter {
-    weak var view: HomeScreenViewProtocol?
+    unowned let view: HomeScreenView
     
-    required init(view: HomeScreenViewProtocol) {
+    init(view: HomeScreenView) {
         self.view = view
     }
 }

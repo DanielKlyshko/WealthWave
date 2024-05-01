@@ -4,13 +4,14 @@ protocol TransactionsListViewProtocol: AnyObject {
     
 }
 
-class TransactionsListView: UIViewController {
+final class TransactionsListView: UIViewController {
     
     var presenter: TransactionsListPresenter!
     var pageHeaderLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.addSubview(pageHeaderLabel)
         
         constrainsSettings()

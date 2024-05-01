@@ -25,8 +25,8 @@
 		1C574C0A2BDEDDC30013444A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C574C092BDEDDC30013444A /* GoogleService-Info.plist */; };
 		1C71898E2BDEE35600BD27B3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1C71898D2BDEE35600BD27B3 /* FirebaseAuth */; };
 		1C7189902BDEE35600BD27B3 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 1C71898F2BDEE35600BD27B3 /* FirebaseDatabase */; };
-		1C7189922BDEE78C00BD27B3 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189912BDEE78C00BD27B3 /* AuthView.swift */; };
-		1C7189942BDEE79C00BD27B3 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189932BDEE79C00BD27B3 /* AuthPresenter.swift */; };
+		1C7189962BE22EFA00BD27B3 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189952BE22EFA00BD27B3 /* SignInView.swift */; };
+		1C7189982BE22F0B00BD27B3 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189972BE22F0B00BD27B3 /* SignInPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,8 +48,8 @@
 		1C43B7812BDABB4100161D6E /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		1C43B7822BDABB4100161D6E /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		1C574C092BDEDDC30013444A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		1C7189912BDEE78C00BD27B3 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
-		1C7189932BDEE79C00BD27B3 /* AuthPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		1C7189952BE22EFA00BD27B3 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		1C7189972BE22F0B00BD27B3 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,7 @@
 		1C43B7622BD0385E00161D6E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1C7189912BDEE78C00BD27B3 /* AuthView.swift */,
+				1C7189952BE22EFA00BD27B3 /* SignInView.swift */,
 				1C43B7652BD03C8600161D6E /* TabBarView.swift */,
 				1C43B7692BD0440900161D6E /* HomeScreenView.swift */,
 				1C43B76D2BD0446F00161D6E /* TransactionsListView.swift */,
@@ -113,7 +113,7 @@
 		1C43B7632BD0386600161D6E /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				1C7189932BDEE79C00BD27B3 /* AuthPresenter.swift */,
+				1C7189972BE22F0B00BD27B3 /* SignInPresenter.swift */,
 				1C43B7672BD03C9D00161D6E /* TabBarPresenter.swift */,
 				1C43B76B2BD0443600161D6E /* HomeScreePresenter.swift */,
 				1C43B76F2BD0447F00161D6E /* TransactionsListPresenter.swift */,
@@ -242,9 +242,9 @@
 				1C43B76A2BD0440900161D6E /* HomeScreenView.swift in Sources */,
 				1C43B76C2BD0443600161D6E /* HomeScreePresenter.swift in Sources */,
 				1C43B74F2BCC631A00161D6E /* AppDelegate.swift in Sources */,
-				1C7189942BDEE79C00BD27B3 /* AuthPresenter.swift in Sources */,
+				1C7189982BE22F0B00BD27B3 /* SignInPresenter.swift in Sources */,
+				1C7189962BE22EFA00BD27B3 /* SignInView.swift in Sources */,
 				1C43B7722BD845B800161D6E /* Builder.swift in Sources */,
-				1C7189922BDEE78C00BD27B3 /* AuthView.swift in Sources */,
 				1C43B76E2BD0446F00161D6E /* TransactionsListView.swift in Sources */,
 				1C43B7662BD03C8600161D6E /* TabBarView.swift in Sources */,
 				1C43B7512BCC631A00161D6E /* SceneDelegate.swift in Sources */,

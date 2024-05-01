@@ -4,10 +4,9 @@ protocol HomeScreenViewProtocol: AnyObject {
     
 }
 
-class HomeScreenView: UIViewController {
+final class HomeScreenView: UIViewController {
     
     var presenter: HomeScreePresenter!
-    
     var controllerBGView = UIView()
     var accountBGView = UIView()
     var totalCountCurrencyLabel = UILabel()
@@ -15,11 +14,10 @@ class HomeScreenView: UIViewController {
     var incomeButton = UIButton()
     var outcomButton = UIButton()
     var lastTransactionsTitleLable = UILabel()
-    
-    var newEl = UILabel()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.addSubview(controllerBGView)
         view.addSubview(accountBGView)
         view.addSubview(totalCountCurrencyLabel)
@@ -28,13 +26,11 @@ class HomeScreenView: UIViewController {
         controllerBGView.addSubview(outcomButton)
         view.addSubview(lastTransactionsTitleLable)
         
-        UISetting()
+        constraintsSettings()
+        uiSettings()
     }
     
-    private func UISetting() {
-        view.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1)
-        
-
+    private func constraintsSettings() {
         controllerBGView.translatesAutoresizingMaskIntoConstraints = false
         controllerBGView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
         controllerBGView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
@@ -70,7 +66,11 @@ class HomeScreenView: UIViewController {
         lastTransactionsTitleLable.translatesAutoresizingMaskIntoConstraints = false
         lastTransactionsTitleLable.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
         lastTransactionsTitleLable.topAnchor.constraint(equalTo: controllerBGView.bottomAnchor, constant: 30).isActive = true
-
+    }
+    
+    private func uiSettings() {
+        view.backgroundColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1)
+        
         controllerBGView.backgroundColor = UIColor(red: 66/255, green: 120/255, blue: 255/255, alpha: 1)
         controllerBGView.layer.cornerRadius = 20
         
