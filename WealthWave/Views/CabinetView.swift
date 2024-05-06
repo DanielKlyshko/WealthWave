@@ -25,8 +25,12 @@ final class CabinetView: UIViewController {
     }
     
     private func constraintsSettings() {
+        userUsernameLabel.translatesAutoresizingMaskIntoConstraints = false
+        userUsernameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        userUsernameLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 60).isActive = true
+        
         logOutButton.translatesAutoresizingMaskIntoConstraints = false
-        logOutButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
+        logOutButton.topAnchor.constraint(equalTo: userUsernameLabel.bottomAnchor, constant: 20).isActive = true
         logOutButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
         logOutButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
         logOutButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -46,19 +50,22 @@ final class CabinetView: UIViewController {
     private func uiSettings() {
         view.backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
         
+        userUsernameLabel.text = "Username"
+        userUsernameLabel.font = UIFont(name: "Montserrat-ExtraBold", size: 24)
+        userUsernameLabel.textColor = UIColor(red: 31/255, green: 31/255, blue: 31/255, alpha: 1)
+        
         logOutButton.backgroundColor = .white
         logOutButton.layer.cornerRadius = 5
         logOutButton.setTitle("Log out", for: .normal)
         logOutButton.setTitleColor(.black, for: .normal)
-        logOutButton.titleLabel?.font = UIFont(name: "Montserrat-SemiBold", size: 14)
-        var buttonConfig = UIButton.Configuration.plain()
-        buttonConfig.titlePadding = 20
-        logOutButton.configuration = buttonConfig
+        logOutButton.titleLabel?.font = UIFont(name: "Montserrat-SemiBold", size: 16)
+        
+
         
         logOutIconBGCircleView.backgroundColor = .systemRed
         logOutIconBGCircleView.layer.cornerRadius = 18
         
-        logOutIconImage.image = UIImage(named: "mailIcon")
+        logOutIconImage.image = UIImage(named: "logOutIcon")
     }
     
 }

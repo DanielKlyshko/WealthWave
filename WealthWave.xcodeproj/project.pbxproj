@@ -35,6 +35,8 @@
 		1C7189A82BE2EB4800BD27B3 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189A72BE2EB4800BD27B3 /* SignUpModel.swift */; };
 		1C7189AA2BE2EC7700BD27B3 /* CabinetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189A92BE2EC7700BD27B3 /* CabinetView.swift */; };
 		1C7189AC2BE2EC8600BD27B3 /* CabinetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189AB2BE2EC8600BD27B3 /* CabinetPresenter.swift */; };
+		1C7189AE2BE41A0D00BD27B3 /* IncomOutcomAddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189AD2BE41A0C00BD27B3 /* IncomOutcomAddingView.swift */; };
+		1C7189B02BE41A3E00BD27B3 /* IncomOutcomAddingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189AF2BE41A3E00BD27B3 /* IncomOutcomAddingPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		1C7189A72BE2EB4800BD27B3 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		1C7189A92BE2EC7700BD27B3 /* CabinetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetView.swift; sourceTree = "<group>"; };
 		1C7189AB2BE2EC8600BD27B3 /* CabinetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetPresenter.swift; sourceTree = "<group>"; };
+		1C7189AD2BE41A0C00BD27B3 /* IncomOutcomAddingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomOutcomAddingView.swift; sourceTree = "<group>"; };
+		1C7189AF2BE41A3E00BD27B3 /* IncomOutcomAddingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomOutcomAddingPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 				1C71899B2BE2443100BD27B3 /* SignUpView.swift */,
 				1C43B7652BD03C8600161D6E /* TabBarView.swift */,
 				1C43B7692BD0440900161D6E /* HomeScreenView.swift */,
+				1C7189AD2BE41A0C00BD27B3 /* IncomOutcomAddingView.swift */,
 				1C43B76D2BD0446F00161D6E /* TransactionsListView.swift */,
 				1C71899D2BE272B600BD27B3 /* TransactionTableViewCell.swift */,
 				1C7189A92BE2EC7700BD27B3 /* CabinetView.swift */,
@@ -136,6 +141,7 @@
 				1C7189992BE2441C00BD27B3 /* SignUpPresenter.swift */,
 				1C43B7672BD03C9D00161D6E /* TabBarPresenter.swift */,
 				1C43B76B2BD0443600161D6E /* HomeScreePresenter.swift */,
+				1C7189AF2BE41A3E00BD27B3 /* IncomOutcomAddingPresenter.swift */,
 				1C43B76F2BD0447F00161D6E /* TransactionsListPresenter.swift */,
 				1C7189AB2BE2EC8600BD27B3 /* CabinetPresenter.swift */,
 			);
@@ -266,6 +272,7 @@
 				1C43B7702BD0447F00161D6E /* TransactionsListPresenter.swift in Sources */,
 				1C7189A82BE2EB4800BD27B3 /* SignUpModel.swift in Sources */,
 				1C43B76A2BD0440900161D6E /* HomeScreenView.swift in Sources */,
+				1C7189AE2BE41A0D00BD27B3 /* IncomOutcomAddingView.swift in Sources */,
 				1C43B76C2BD0443600161D6E /* HomeScreePresenter.swift in Sources */,
 				1C71899E2BE272B600BD27B3 /* TransactionTableViewCell.swift in Sources */,
 				1C7189A62BE2EB3800BD27B3 /* SignInModel.swift in Sources */,
@@ -279,6 +286,7 @@
 				1C43B7722BD845B800161D6E /* Builder.swift in Sources */,
 				1C43B76E2BD0446F00161D6E /* TransactionsListView.swift in Sources */,
 				1C43B7662BD03C8600161D6E /* TabBarView.swift in Sources */,
+				1C7189B02BE41A3E00BD27B3 /* IncomOutcomAddingPresenter.swift in Sources */,
 				1C43B7512BCC631A00161D6E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

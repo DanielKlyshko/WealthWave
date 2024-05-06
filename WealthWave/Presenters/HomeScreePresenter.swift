@@ -2,6 +2,8 @@ import UIKit
 
 protocol HomeScreenPresenterProtocol: AnyObject {
     var transactions: [TransactionsItem]? {get set}
+    func incomeButtonTapped()
+    func outcomButtonTapped()
 }
 
 class HomeScreePresenter {
@@ -14,7 +16,15 @@ class HomeScreePresenter {
     }
 }
 
-extension HomeScreePresenter: TransactionsListPresenterProtocol {
+extension HomeScreePresenter: HomeScreenPresenterProtocol {
+    func incomeButtonTapped() {
+        self.view.present(UINavigationController(rootViewController: Builder.createIncomOutcomAddingViewController()), animated: true, completion: nil)
+    }
+    
+    func outcomButtonTapped() {
+        self.view.present(UINavigationController(rootViewController: Builder.createIncomOutcomAddingViewController()), animated: true, completion: nil)
+    }
+    
 
     func getTransactions() {
         self.transactions = TransactionsItem.getMockData()

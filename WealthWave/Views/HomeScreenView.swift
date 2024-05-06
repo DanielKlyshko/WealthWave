@@ -89,10 +89,12 @@ final class HomeScreenView: UIViewController {
         incomeButton.setImage(UIImage(named: "inputIcon"), for: .normal)
         incomeButton.backgroundColor = UIColor(red: 97/255, green: 141/255, blue: 255/255, alpha: 1)
         incomeButton.layer.cornerRadius = 34
+        incomeButton.addTarget(self, action: #selector(incomeButtonTapped), for: .touchUpInside)
         
         outcomButton.setImage(UIImage(named: "outputIcon"), for: .normal)
         outcomButton.backgroundColor = UIColor(red: 97/255, green: 141/255, blue: 255/255, alpha: 1)
         outcomButton.layer.cornerRadius = 34
+        outcomButton.addTarget(self, action: #selector(outcomButtonTapped), for: .touchUpInside)
         
         lastTransactionsTitleLable.text = "Last transactions"
         lastTransactionsTitleLable.font = UIFont(name: "Montserrat-ExtraBold", size: 24)
@@ -126,4 +128,13 @@ extension HomeScreenView: HomeScreenViewProtocol {
     func showTransactions() {
         lastTransactionsTable.reloadData()
     }
+    
+    @objc private func incomeButtonTapped() {
+        presenter.incomeButtonTapped()
+    }
+    
+    @objc private func outcomButtonTapped() {
+        presenter.outcomButtonTapped()
+    }
+    
 }

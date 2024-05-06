@@ -20,12 +20,10 @@ extension TabBarPresenter: TabBarPresenterProtocol {
         homeScreen.tabBarItem.image = UIImage(named: "homeIcon")
         let transactionsList = Builder.createTransactionsListViewController()
         transactionsList.tabBarItem.image = UIImage(named: "listIcon")
-        let graphList = Builder.createTransactionsListViewController()
-        graphList.tabBarItem.image = UIImage(named: "graphIcon")
         let cabinetPage = Builder.createCabinetViewController()
         cabinetPage.tabBarItem.image = UIImage(named: "userIcon")
          
-        self.view.setControllers(controllers: [homeScreen, transactionsList, graphList, cabinetPage])
+        self.view.setControllers(controllers: [homeScreen, transactionsList, cabinetPage])
     }
 }
 

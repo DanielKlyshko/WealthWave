@@ -37,7 +37,15 @@ class Builder: BuilderProtocol {
         let homeSreenPresenter = HomeScreePresenter(view: homeScreenView)
         
         homeScreenView.presenter = homeSreenPresenter
-        return homeScreenView
+        return UINavigationController(rootViewController: homeScreenView)
+    }
+    
+    static func createIncomOutcomAddingViewController() -> UIViewController {
+        let incomOutcomAddingView = IncomOutcomAddingView()
+        let incomOutcomAddingPresenter = IncomOutcomAddingPresenter(view: incomOutcomAddingView)
+        
+        incomOutcomAddingView.presenter = incomOutcomAddingPresenter
+        return incomOutcomAddingView
     }
     
     static func createTransactionsListViewController() -> UIViewController {
