@@ -15,19 +15,49 @@ class SignUpPresenter {
 
 extension SignUpPresenter: SignUpPresenterProtocol {
     func signUpButtonTapped() {
-        let email = view.loginTextField.text ?? ""
-        let password = view.passwordTextField.text ?? ""
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            if let result = result {
-                print(result)
-            } else {
-                print(error)
-            }
+        
+        let signUpUserRequest = SignUpUserRequest(
+            username: view.nicknameTextField.text ?? "",
+            email: view.loginTextField.text ?? "",
+            password: view.passwordTextField.text ?? ""
+        )
+        
+        if !Validator.isValidUsername(for: signUpUserRequest.username) {
+            AlertManager.showInvalidUsernameAlert(on: view)
+            return
         }
-        UINavigationController(rootViewController: Builder.createTabBarController()).modalPresentationStyle = .fullScreen
-        self.view.present(UINavigationController(rootViewController: Builder.createTabBarController()), animated: true, completion: nil)
+        
+        if !Validator.isValidEmail(for: signUpUserRequest.email) {
+            AlertManager.showInvalidEmailAlert(on: view)
+            return
+        }
+        
+        if !Validator.isValidPassword(for: signUpUserRequest.password) {
+            AlertManager.showInvalidPasswordAlert(on: view)
+            return
+        }
+        
+        
+        // TODO
+        AuthService.shared.signUpUser(with: signUpUserRequest) { [weak self] wasRegistered, error in
+            
+            guard let self = self?.view else {return}
+            
+            if let error = error {
+                AlertManager.showSignUpErrorAlert(on: self, with: error)
+                return
+            }
+            
+            if wasRegistered {
+                if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
+                    sceneDelegate.checkAuthetification()
+                } else {
+                    AlertManager.showSignUpErrorAlert(on: self)
+                }
+            }
+            
+       }
     }
-    
 }
 
     

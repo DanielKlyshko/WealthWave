@@ -25,7 +25,6 @@ extension HomeScreePresenter: HomeScreenPresenterProtocol {
         self.view.present(UINavigationController(rootViewController: Builder.createIncomOutcomAddingViewController()), animated: true, completion: nil)
     }
     
-
     func getTransactions() {
         self.transactions = TransactionsItem.getMockData()
         view.showTransactions()

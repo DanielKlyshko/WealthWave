@@ -59,13 +59,16 @@ final class CabinetView: UIViewController {
         logOutButton.setTitle("Log out", for: .normal)
         logOutButton.setTitleColor(.black, for: .normal)
         logOutButton.titleLabel?.font = UIFont(name: "Montserrat-SemiBold", size: 16)
-        
-
+        logOutButton.addTarget(self, action: #selector(logOutButtonTapped), for: .touchUpInside)
         
         logOutIconBGCircleView.backgroundColor = .systemRed
         logOutIconBGCircleView.layer.cornerRadius = 18
         
         logOutIconImage.image = UIImage(named: "logOutIcon")
+    }
+    
+    @objc private func logOutButtonTapped(_ sender: UIButton) {
+        presenter.logOutButtonTapped()
     }
     
 }

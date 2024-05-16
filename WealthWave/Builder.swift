@@ -13,7 +13,7 @@ class Builder: BuilderProtocol {
         let signInPresenter = SignInPresenter(view: signInView)
         
         signInView.presenter = signInPresenter
-        return UINavigationController(rootViewController: signInView)
+        return signInView
     }
     
     static func createSignUpViewController() -> UIViewController {

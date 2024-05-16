@@ -37,6 +37,11 @@
 		1C7189AC2BE2EC8600BD27B3 /* CabinetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189AB2BE2EC8600BD27B3 /* CabinetPresenter.swift */; };
 		1C7189AE2BE41A0D00BD27B3 /* IncomOutcomAddingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189AD2BE41A0C00BD27B3 /* IncomOutcomAddingView.swift */; };
 		1C7189B02BE41A3E00BD27B3 /* IncomOutcomAddingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189AF2BE41A3E00BD27B3 /* IncomOutcomAddingPresenter.swift */; };
+		1C7189D22BF3DDA800BD27B3 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189D12BF3DDA800BD27B3 /* AlertManager.swift */; };
+		1C7189D42BF40A3F00BD27B3 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189D32BF40A3F00BD27B3 /* AuthService.swift */; };
+		1C7189D62BF40DCF00BD27B3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1C7189D52BF40DCF00BD27B3 /* FirebaseFirestore */; };
+		1C7189D82BF54F1600BD27B3 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189D72BF54F1600BD27B3 /* Validator.swift */; };
+		1C7E48402BF6A0250087AC2C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E483F2BF6A0250087AC2C /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +75,10 @@
 		1C7189AB2BE2EC8600BD27B3 /* CabinetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetPresenter.swift; sourceTree = "<group>"; };
 		1C7189AD2BE41A0C00BD27B3 /* IncomOutcomAddingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomOutcomAddingView.swift; sourceTree = "<group>"; };
 		1C7189AF2BE41A3E00BD27B3 /* IncomOutcomAddingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomOutcomAddingPresenter.swift; sourceTree = "<group>"; };
+		1C7189D12BF3DDA800BD27B3 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		1C7189D32BF40A3F00BD27B3 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		1C7189D72BF54F1600BD27B3 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		1C7E483F2BF6A0250087AC2C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +88,7 @@
 			files = (
 				1C7189902BDEE35600BD27B3 /* FirebaseDatabase in Frameworks */,
 				1C71898E2BDEE35600BD27B3 /* FirebaseAuth in Frameworks */,
+				1C7189D62BF40DCF00BD27B3 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				1C43B7712BD845B800161D6E /* Builder.swift */,
+				1C7189D12BF3DDA800BD27B3 /* AlertManager.swift */,
+				1C7189D32BF40A3F00BD27B3 /* AuthService.swift */,
+				1C7189D72BF54F1600BD27B3 /* Validator.swift */,
 				1C43B7642BD0387B00161D6E /* Models */,
 				1C43B7632BD0386600161D6E /* Presenters */,
 				1C43B7622BD0385E00161D6E /* Views */,
@@ -154,6 +167,7 @@
 				1C7189A52BE2EB3800BD27B3 /* SignInModel.swift */,
 				1C7189A72BE2EB4800BD27B3 /* SignUpModel.swift */,
 				1C7189A32BE27A2700BD27B3 /* TransactionCellDataModel.swift */,
+				1C7E483F2BF6A0250087AC2C /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -204,6 +218,7 @@
 			packageProductDependencies = (
 				1C71898D2BDEE35600BD27B3 /* FirebaseAuth */,
 				1C71898F2BDEE35600BD27B3 /* FirebaseDatabase */,
+				1C7189D52BF40DCF00BD27B3 /* FirebaseFirestore */,
 			);
 			productName = WealthWave;
 			productReference = 1C43B74B2BCC631A00161D6E /* WealthWave.app */;
@@ -268,7 +283,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C43B7682BD03C9D00161D6E /* TabBarPresenter.swift in Sources */,
+				1C7189D42BF40A3F00BD27B3 /* AuthService.swift in Sources */,
 				1C7189AA2BE2EC7700BD27B3 /* CabinetView.swift in Sources */,
+				1C7E48402BF6A0250087AC2C /* User.swift in Sources */,
 				1C43B7702BD0447F00161D6E /* TransactionsListPresenter.swift in Sources */,
 				1C7189A82BE2EB4800BD27B3 /* SignUpModel.swift in Sources */,
 				1C43B76A2BD0440900161D6E /* HomeScreenView.swift in Sources */,
@@ -279,8 +296,10 @@
 				1C7189AC2BE2EC8600BD27B3 /* CabinetPresenter.swift in Sources */,
 				1C43B74F2BCC631A00161D6E /* AppDelegate.swift in Sources */,
 				1C7189982BE22F0B00BD27B3 /* SignInPresenter.swift in Sources */,
+				1C7189D22BF3DDA800BD27B3 /* AlertManager.swift in Sources */,
 				1C71899A2BE2441C00BD27B3 /* SignUpPresenter.swift in Sources */,
 				1C7189962BE22EFA00BD27B3 /* SignInView.swift in Sources */,
+				1C7189D82BF54F1600BD27B3 /* Validator.swift in Sources */,
 				1C7189A42BE27A2700BD27B3 /* TransactionCellDataModel.swift in Sources */,
 				1C71899C2BE2443100BD27B3 /* SignUpView.swift in Sources */,
 				1C43B7722BD845B800161D6E /* Builder.swift in Sources */,
@@ -431,6 +450,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4894AA5VL3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WealthWave/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -457,6 +477,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4894AA5VL3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WealthWave/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -520,6 +541,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1C574C0B2BDEE13A0013444A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
+		};
+		1C7189D52BF40DCF00BD27B3 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C574C0B2BDEE13A0013444A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

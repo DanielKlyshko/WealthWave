@@ -53,7 +53,7 @@ final class SignUpView: UIViewController {
     
     private func constraintsSetting() {
         logoImage.translatesAutoresizingMaskIntoConstraints = false
-        logoImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 164).isActive = true
+        logoImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 124).isActive = true
         logoImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         logoImage.widthAnchor.constraint(equalToConstant: 80).isActive = true
         logoImage.heightAnchor.constraint(equalToConstant: 64).isActive = true

@@ -16,25 +16,42 @@ class SignInPresenter {
 
 extension SignInPresenter: SignInPresenterProtocol {
     func signInButtonTapped() {
-        let email = view.loginTextField.text ?? ""
-        let password = view.passwordTextField.text ?? ""
-        Auth.auth().signIn(withEmail: email, password: password) { result, error in
-            if let result = result {
-                print(result)
+        let signInUserRequest = SignInUserRequest(
+            email: view.loginTextField.text ?? "",
+            password: view.passwordTextField.text  ?? ""
+        )
+        
+        if !Validator.isValidEmail(for: signInUserRequest.email) {
+            AlertManager.showInvalidEmailAlert(on: view)
+            return
+        }
+        
+        if !Validator.isValidPassword(for: signInUserRequest.password) {
+            AlertManager.showInvalidPasswordAlert(on: view)
+            return
+        }
+        
+        AuthService.shared.signInUser(with: signInUserRequest) { [weak self] error in
+            
+            guard let self = self?.view else {return}
+            
+            if let error = error {
+                AlertManager.showSignInErrorAlert(on: self, with: error)
+                return
+            }
+            
+            if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
+                sceneDelegate.checkAuthetification()
             } else {
-                print(error)
+                AlertManager.showSignUpErrorAlert(on: self)
             }
         }
         
-        let vc = Builder.createTabBarController()
-        let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .fullScreen
-        self.view.present(nav, animated: false, completion: nil)
     }
     
     
     func signUpButtonTapped() {
-        self.view.navigationController?.pushViewController(SignUpView(), animated: true)
+        self.view.present(UINavigationController(rootViewController: Builder.createSignUpViewController()), animated: true, completion: nil)
     }
     
 }
