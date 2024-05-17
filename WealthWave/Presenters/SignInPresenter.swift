@@ -31,9 +31,9 @@ extension SignInPresenter: SignInPresenterProtocol {
             return
         }
         
-        AuthService.shared.signInUser(with: signInUserRequest) { [weak self] error in
+        AuthService.shared.signInUser(with: signInUserRequest) { [weak view] error in
             
-            guard let self = self?.view else {return}
+            guard let self = view else {return}
             
             if let error = error {
                 AlertManager.showSignInErrorAlert(on: self, with: error)

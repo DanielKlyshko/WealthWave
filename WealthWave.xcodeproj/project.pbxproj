@@ -41,7 +41,7 @@
 		1C7189D42BF40A3F00BD27B3 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189D32BF40A3F00BD27B3 /* AuthService.swift */; };
 		1C7189D62BF40DCF00BD27B3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1C7189D52BF40DCF00BD27B3 /* FirebaseFirestore */; };
 		1C7189D82BF54F1600BD27B3 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7189D72BF54F1600BD27B3 /* Validator.swift */; };
-		1C7E48402BF6A0250087AC2C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E483F2BF6A0250087AC2C /* User.swift */; };
+		1C7E48402BF6A0250087AC2C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E483F2BF6A0250087AC2C /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,7 +78,7 @@
 		1C7189D12BF3DDA800BD27B3 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		1C7189D32BF40A3F00BD27B3 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		1C7189D72BF54F1600BD27B3 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
-		1C7E483F2BF6A0250087AC2C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1C7E483F2BF6A0250087AC2C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +167,7 @@
 				1C7189A52BE2EB3800BD27B3 /* SignInModel.swift */,
 				1C7189A72BE2EB4800BD27B3 /* SignUpModel.swift */,
 				1C7189A32BE27A2700BD27B3 /* TransactionCellDataModel.swift */,
-				1C7E483F2BF6A0250087AC2C /* User.swift */,
+				1C7E483F2BF6A0250087AC2C /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -285,7 +285,7 @@
 				1C43B7682BD03C9D00161D6E /* TabBarPresenter.swift in Sources */,
 				1C7189D42BF40A3F00BD27B3 /* AuthService.swift in Sources */,
 				1C7189AA2BE2EC7700BD27B3 /* CabinetView.swift in Sources */,
-				1C7E48402BF6A0250087AC2C /* User.swift in Sources */,
+				1C7E48402BF6A0250087AC2C /* UserModel.swift in Sources */,
 				1C43B7702BD0447F00161D6E /* TransactionsListPresenter.swift in Sources */,
 				1C7189A82BE2EB4800BD27B3 /* SignUpModel.swift in Sources */,
 				1C43B76A2BD0440900161D6E /* HomeScreenView.swift in Sources */,

@@ -39,9 +39,9 @@ extension SignUpPresenter: SignUpPresenterProtocol {
         
         
         // TODO
-        AuthService.shared.signUpUser(with: signUpUserRequest) { [weak self] wasRegistered, error in
+        AuthService.shared.signUpUser(with: signUpUserRequest) { [weak view] wasRegistered, error in
             
-            guard let self = self?.view else {return}
+            guard let self = view else {return}
             
             if let error = error {
                 AlertManager.showSignUpErrorAlert(on: self, with: error)

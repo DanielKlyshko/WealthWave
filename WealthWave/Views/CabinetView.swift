@@ -22,6 +22,18 @@ final class CabinetView: UIViewController {
         
         constraintsSettings()
         uiSettings()
+        
+        AuthService.shared.fetchUser { [weak self] user, error in
+            guard let self = self else {return}
+            
+            if let error = error {
+                AlertManager.showFetchingUserErrorAlert(on: self, with: error)
+            }
+            
+            if let user = user {
+                userUsernameLabel.text = "\(user.username)"
+            }
+        }
     }
     
     private func constraintsSettings() {
@@ -50,7 +62,6 @@ final class CabinetView: UIViewController {
     private func uiSettings() {
         view.backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
         
-        userUsernameLabel.text = "Username"
         userUsernameLabel.font = UIFont(name: "Montserrat-ExtraBold", size: 24)
         userUsernameLabel.textColor = UIColor(red: 31/255, green: 31/255, blue: 31/255, alpha: 1)
         
