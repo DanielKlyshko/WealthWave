@@ -4,7 +4,7 @@ protocol TabBarPresenterProtocol: AnyObject {
     func buildTabBar()
 }
 
-class TabBarPresenter {
+final class TabBarPresenter {
     unowned let view: TabBarView
     
     init(view: TabBarView) {

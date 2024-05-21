@@ -1,17 +1,17 @@
 import UIKit
 
-protocol IncomOutcomAddingViewProtocol: AnyObject {
+protocol IncomAddingViewProtocol: AnyObject {
 
 }
 
-final class IncomOutcomAddingView: UIViewController {
-    
-    var presenter: IncomOutcomAddingPresenter!
+final class IncomAddingView: UIViewController {
+
+    var presenter: IncomAddingPresenter!
     var headerLabel = UILabel()
-    private var nameOfTrasactionTextField = UITextField()
-    private var countOfTransactionTextField = UITextField()
-    private var transactionDateDatePicker = UIDatePicker()
-    private var saveTransactionButton = UIButton()
+    var nameOfTrasactionTextField = UITextField()
+    var countOfTransactionTextField = UITextField()
+    var transactionDateDatePicker = UIDatePicker()
+    var saveTransactionButton = UIButton()
     
     
     override func viewDidLoad() {
@@ -59,7 +59,7 @@ final class IncomOutcomAddingView: UIViewController {
     private func uiSettings() {
         view.backgroundColor = UIColor(red: 242/255, green: 242/255, blue: 242/255, alpha: 1)
         
-        headerLabel.text = "Add transaction"
+        headerLabel.text = "Incom"
         headerLabel.font = UIFont(name: "Montserrat-ExtraBold", size: 24)
         headerLabel.textColor = UIColor(red: 31/255, green: 31/255, blue: 31/255, alpha: 1)
         
@@ -88,6 +88,6 @@ final class IncomOutcomAddingView: UIViewController {
     
 }
 
-extension IncomOutcomAddingView: IncomOutcomAddingViewProtocol {
+extension IncomAddingView: IncomAddingViewProtocol {
   
 }

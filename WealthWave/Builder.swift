@@ -1,12 +1,6 @@
 import UIKit
 
-protocol BuilderProtocol {
-    static func createTabBarController() -> UIViewController
-    static func createHomeScreenViewController() -> UIViewController
-    static func createTransactionsListViewController() -> UIViewController
-}
-
-class Builder: BuilderProtocol {
+final class Builder {
     
     static func createSignInViewController() -> UIViewController {
         let signInView = SignInView()
@@ -34,18 +28,28 @@ class Builder: BuilderProtocol {
     
     static func createHomeScreenViewController() -> UIViewController {
         let homeScreenView = HomeScreenView()
-        let homeSreenPresenter = HomeScreePresenter(view: homeScreenView)
+        let homeSreenPresenter = HomeScreenPresenter(view: homeScreenView)
         
         homeScreenView.presenter = homeSreenPresenter
         return UINavigationController(rootViewController: homeScreenView)
     }
     
-    static func createIncomOutcomAddingViewController() -> UIViewController {
-        let incomOutcomAddingView = IncomOutcomAddingView()
-        let incomOutcomAddingPresenter = IncomOutcomAddingPresenter(view: incomOutcomAddingView)
+    static func createIncomAddingViewController(delegate: TransactionsUpdateDelegate) -> UIViewController {
+        let incomAddingView = IncomAddingView()
+        let incomAddingPresenter = IncomAddingPresenter(view: incomAddingView)
         
-        incomOutcomAddingView.presenter = incomOutcomAddingPresenter
-        return incomOutcomAddingView
+        incomAddingView.presenter = incomAddingPresenter
+        incomAddingPresenter.updateDelegate = delegate
+        return incomAddingView
+    }
+    
+    static func createOutcomAddingViewController(delegate: TransactionsUpdateDelegate) -> UIViewController {
+        let outcomAddingView = OutcomAddingView()
+        let outcomAddingPresenter = OutcomAddingPresenter(view: outcomAddingView)
+        
+        outcomAddingView.presenter = outcomAddingPresenter
+        outcomAddingPresenter.updateDelegate = delegate
+        return outcomAddingView
     }
     
     static func createTransactionsListViewController() -> UIViewController {

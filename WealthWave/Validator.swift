@@ -1,6 +1,6 @@
 import Foundation
 
-class Validator {
+final class Validator {
     
     static func isValidUsername(for username: String) -> Bool {
         let username = username.trimmingCharacters(in: .whitespacesAndNewlines)

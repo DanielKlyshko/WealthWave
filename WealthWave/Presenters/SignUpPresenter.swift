@@ -5,7 +5,7 @@ protocol SignUpPresenterProtocol: AnyObject {
     func signUpButtonTapped()
 }
 
-class SignUpPresenter {
+final class SignUpPresenter {
     unowned let view: SignUpView
     
     init(view: SignUpView) {
@@ -37,8 +37,6 @@ extension SignUpPresenter: SignUpPresenterProtocol {
             return
         }
         
-        
-        // TODO
         AuthService.shared.signUpUser(with: signUpUserRequest) { [weak view] wasRegistered, error in
             
             guard let self = view else {return}

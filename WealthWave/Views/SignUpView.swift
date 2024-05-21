@@ -45,7 +45,6 @@ final class SignUpView: UIViewController {
         
         view.addSubview(signUpButton)
         
-        
         constraintsSetting()
         uiSettings()
 

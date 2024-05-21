@@ -7,7 +7,7 @@ protocol CabinetViewProtocol: AnyObject {
 final class CabinetView: UIViewController {
     
     var presenter: CabinetPresenter!
-    private var userUsernameLabel = UILabel()
+    var userUsernameLabel = UILabel()
     private var logOutButton = UIButton()
     private var logOutIconBGCircleView = UIView()
     private var logOutIconImage = UIImageView()
@@ -23,17 +23,7 @@ final class CabinetView: UIViewController {
         constraintsSettings()
         uiSettings()
         
-        AuthService.shared.fetchUser { [weak self] user, error in
-            guard let self = self else {return}
-            
-            if let error = error {
-                AlertManager.showFetchingUserErrorAlert(on: self, with: error)
-            }
-            
-            if let user = user {
-                userUsernameLabel.text = "\(user.username)"
-            }
-        }
+        presenter.setUserUsername()
     }
     
     private func constraintsSettings() {

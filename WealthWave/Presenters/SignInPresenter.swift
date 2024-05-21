@@ -6,7 +6,7 @@ protocol SignInPresenterProtocol: AnyObject {
     func signUpButtonTapped()
 }
 
-class SignInPresenter {
+final class SignInPresenter {
     unowned let view: SignInView
     
     init(view: SignInView) {
@@ -48,7 +48,6 @@ extension SignInPresenter: SignInPresenterProtocol {
         }
         
     }
-    
     
     func signUpButtonTapped() {
         self.view.present(UINavigationController(rootViewController: Builder.createSignUpViewController()), animated: true, completion: nil)

@@ -4,9 +4,13 @@ protocol HomeScreenViewProtocol: AnyObject {
     func showTransactions()
 }
 
+protocol TransactionsUpdateDelegate: AnyObject {
+    func didAddTransaction(_ transaction: TransactionsItem)
+}
+
 final class HomeScreenView: UIViewController {
     
-    var presenter: HomeScreePresenter!
+    var presenter: HomeScreenPresenter!
     var controllerBGView = UIView()
     var totalCountCurrencyLabel = UILabel()
     var totalCountValueLabel = UILabel()
@@ -109,7 +113,7 @@ final class HomeScreenView: UIViewController {
 extension HomeScreenView: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.presenter.transactions?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -129,9 +133,6 @@ extension HomeScreenView: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension HomeScreenView: HomeScreenViewProtocol {
-    func showTransactions() {
-        lastTransactionsTable.reloadData()
-    }
     
     @objc private func incomeButtonTapped() {
         presenter.incomeButtonTapped()
@@ -139,6 +140,16 @@ extension HomeScreenView: HomeScreenViewProtocol {
     
     @objc private func outcomButtonTapped() {
         presenter.outcomButtonTapped()
+    }
+    
+    func updateTotalCount(_ total: Double) {
+        totalCountValueLabel.text = String(format: "%.2f", total)
+    }
+
+    func showTransactions() {
+        presenter?.transactions?.reverse()
+        lastTransactionsTable.reloadData()
+        presenter?.calculateTotal()
     }
     
 }

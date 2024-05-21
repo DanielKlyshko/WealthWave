@@ -2,7 +2,8 @@ import Foundation
 import FirebaseAuth
 import FirebaseFirestore
 
-class AuthService {
+final class AuthService {
+    
     public static let shared = AuthService()
     private init() {}
     
@@ -73,10 +74,10 @@ class AuthService {
                     if let snapshot = snapshot,
                        let snapshotData = snapshot.data(),
                        let username = snapshotData["username"] as? String {
-                        let user = UserModel(username: username, userUID: userUID) // Исправление здесь
+                        let user = UserModel(username: username, userUID: userUID)
                         completion(user, nil)
                     }
                 }
-        }
+    }
     
 }
