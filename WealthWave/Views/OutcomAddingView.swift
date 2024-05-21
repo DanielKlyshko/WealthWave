@@ -75,6 +75,8 @@ final class OutcomAddingView: UIViewController {
         countOfTransactionTextField.leftViewMode = .always
         countOfTransactionTextField.attributedPlaceholder = NSAttributedString(string: "Count", attributes: [.font: UIFont(name: "Montserrat-SemiBold", size: 14)!, .foregroundColor: UIColor(red: 165/255, green: 165/255, blue: 165/255, alpha: 1)])
         
+        transactionDateDatePicker.datePickerMode = .date
+        
         saveTransactionButton.backgroundColor = UIColor(red: 66/255, green: 120/255, blue: 255/255, alpha: 1)
         saveTransactionButton.layer.cornerRadius = 10
         saveTransactionButton.setTitle("Save", for: .normal)

@@ -73,7 +73,7 @@ final class HomeScreenView: UIViewController {
         lastTransactionsTable.topAnchor.constraint(equalTo: lastTransactionsTitleLable.bottomAnchor, constant: 20).isActive = true
         lastTransactionsTable.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         lastTransactionsTable.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        lastTransactionsTable.heightAnchor.constraint(equalToConstant: 180).isActive = true
+        lastTransactionsTable.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
     
     private func uiSettings() {
@@ -86,7 +86,7 @@ final class HomeScreenView: UIViewController {
         totalCountCurrencyLabel.font = UIFont(name: "Montserrat-Bold", size: 20)
         totalCountCurrencyLabel.textColor = .white
         
-        totalCountValueLabel.text = "3400"
+        totalCountValueLabel.text = "0"
         totalCountValueLabel.font = UIFont(name: "Montserrat-Bold", size: 48)
         totalCountValueLabel.textColor = .white
         

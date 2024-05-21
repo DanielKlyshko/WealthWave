@@ -15,8 +15,6 @@
 		1C43B7682BD03C9D00161D6E /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B7672BD03C9D00161D6E /* TabBarPresenter.swift */; };
 		1C43B76A2BD0440900161D6E /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B7692BD0440900161D6E /* HomeScreenView.swift */; };
 		1C43B76C2BD0443600161D6E /* HomeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B76B2BD0443600161D6E /* HomeScreenPresenter.swift */; };
-		1C43B76E2BD0446F00161D6E /* TransactionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B76D2BD0446F00161D6E /* TransactionsListView.swift */; };
-		1C43B7702BD0447F00161D6E /* TransactionsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B76F2BD0447F00161D6E /* TransactionsListPresenter.swift */; };
 		1C43B7722BD845B800161D6E /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C43B7712BD845B800161D6E /* Builder.swift */; };
 		1C43B7872BDABB4100161D6E /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C43B7752BDABB4100161D6E /* Montserrat-Bold.ttf */; };
 		1C43B78F2BDABB4100161D6E /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C43B77D2BDABB4100161D6E /* Montserrat-ExtraBold.ttf */; };
@@ -57,8 +55,6 @@
 		1C43B7672BD03C9D00161D6E /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
 		1C43B7692BD0440900161D6E /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		1C43B76B2BD0443600161D6E /* HomeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenPresenter.swift; sourceTree = "<group>"; };
-		1C43B76D2BD0446F00161D6E /* TransactionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsListView.swift; sourceTree = "<group>"; };
-		1C43B76F2BD0447F00161D6E /* TransactionsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsListPresenter.swift; sourceTree = "<group>"; };
 		1C43B7712BD845B800161D6E /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		1C43B7752BDABB4100161D6E /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		1C43B77D2BDABB4100161D6E /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -145,7 +141,6 @@
 				1C43B7692BD0440900161D6E /* HomeScreenView.swift */,
 				1C7189AD2BE41A0C00BD27B3 /* IncomAddingView.swift */,
 				1C7E48412BF802C90087AC2C /* OutcomAddingView.swift */,
-				1C43B76D2BD0446F00161D6E /* TransactionsListView.swift */,
 				1C71899D2BE272B600BD27B3 /* TransactionTableViewCell.swift */,
 				1C7189A92BE2EC7700BD27B3 /* CabinetView.swift */,
 			);
@@ -161,7 +156,6 @@
 				1C43B76B2BD0443600161D6E /* HomeScreenPresenter.swift */,
 				1C7189AF2BE41A3E00BD27B3 /* IncomAddingPresenter.swift */,
 				1C7E48432BF802E80087AC2C /* OutcomAddingPresenter.swift */,
-				1C43B76F2BD0447F00161D6E /* TransactionsListPresenter.swift */,
 				1C7189AB2BE2EC8600BD27B3 /* CabinetPresenter.swift */,
 			);
 			path = Presenters;
@@ -292,7 +286,6 @@
 				1C7189D42BF40A3F00BD27B3 /* AuthService.swift in Sources */,
 				1C7189AA2BE2EC7700BD27B3 /* CabinetView.swift in Sources */,
 				1C7E48402BF6A0250087AC2C /* UserModel.swift in Sources */,
-				1C43B7702BD0447F00161D6E /* TransactionsListPresenter.swift in Sources */,
 				1C7189A82BE2EB4800BD27B3 /* SignUpModel.swift in Sources */,
 				1C43B76A2BD0440900161D6E /* HomeScreenView.swift in Sources */,
 				1C7189AE2BE41A0D00BD27B3 /* IncomAddingView.swift in Sources */,
@@ -309,7 +302,6 @@
 				1C7189A42BE27A2700BD27B3 /* TransactionCellDataModel.swift in Sources */,
 				1C71899C2BE2443100BD27B3 /* SignUpView.swift in Sources */,
 				1C43B7722BD845B800161D6E /* Builder.swift in Sources */,
-				1C43B76E2BD0446F00161D6E /* TransactionsListView.swift in Sources */,
 				1C7E48442BF802E80087AC2C /* OutcomAddingPresenter.swift in Sources */,
 				1C7E48422BF802C90087AC2C /* OutcomAddingView.swift in Sources */,
 				1C43B7662BD03C8600161D6E /* TabBarView.swift in Sources */,

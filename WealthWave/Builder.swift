@@ -52,14 +52,6 @@ final class Builder {
         return outcomAddingView
     }
     
-    static func createTransactionsListViewController() -> UIViewController {
-        let transactionsListView = TransactionsListView()
-        let transactionsListPresenter = TransactionsListPresenter(view: transactionsListView)
-        
-        transactionsListView.presenter = transactionsListPresenter
-        return transactionsListView
-    }
-    
     static func createCabinetViewController() -> UIViewController {
         let cabinetView = CabinetView()
         let cabinetPresenter = CabinetPresenter(view: cabinetView)

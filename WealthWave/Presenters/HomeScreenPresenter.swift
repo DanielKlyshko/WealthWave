@@ -42,7 +42,6 @@ extension HomeScreenPresenter: HomeScreenPresenterProtocol {
     }
 }
 
-
 extension HomeScreenPresenter: TransactionsUpdateDelegate {
     func didAddTransaction(_ transaction: TransactionsItem) {
         transactions?.append(transaction)

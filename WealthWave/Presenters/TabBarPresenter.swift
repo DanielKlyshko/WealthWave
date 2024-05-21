@@ -18,12 +18,11 @@ extension TabBarPresenter: TabBarPresenterProtocol {
     func buildTabBar() {
         let homeScreen = Builder.createHomeScreenViewController()
         homeScreen.tabBarItem.image = UIImage(named: "homeIcon")
-        let transactionsList = Builder.createTransactionsListViewController()
-        transactionsList.tabBarItem.image = UIImage(named: "listIcon")
         let cabinetPage = Builder.createCabinetViewController()
         cabinetPage.tabBarItem.image = UIImage(named: "userIcon")
          
-        self.view.setControllers(controllers: [homeScreen, transactionsList, cabinetPage])
+        self.view.setControllers(controllers: [homeScreen, cabinetPage])
     }
+    
 }
 
