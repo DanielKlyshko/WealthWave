@@ -13,6 +13,7 @@ final class HomeScreenPresenter {
     init(view: HomeScreenView) {
         self.view = view
         getTransactions()
+        loadTransactions()
     }
     
 }
@@ -40,11 +41,35 @@ extension HomeScreenPresenter: HomeScreenPresenterProtocol {
             self.view.updateTotalCount(total)
         }
     }
+    
+    func saveTransactions() {
+            guard let transactions = transactions else { return }
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(transactions) {
+                UserDefaults.standard.set(encoded, forKey: "transactions")
+            }
+        }
+        
+        func loadTransactions() {
+            if let savedTransactions = UserDefaults.standard.object(forKey: "transactions") as? Data {
+                let decoder = JSONDecoder()
+                if let loadedTransactions = try? decoder.decode([TransactionsItem].self, from: savedTransactions) {
+                    transactions = loadedTransactions
+                    calculateTotal()
+                    view.showTransactions()
+                }
+            } else {
+                transactions = TransactionsItem.getMockData()
+                calculateTotal()
+            }
+        }
+    
 }
 
 extension HomeScreenPresenter: TransactionsUpdateDelegate {
     func didAddTransaction(_ transaction: TransactionsItem) {
         transactions?.append(transaction)
+        saveTransactions()
         view.showTransactions()
     }
 }

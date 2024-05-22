@@ -1,6 +1,6 @@
 import Foundation
 
-final class TransactionsItem: Identifiable {
+final class TransactionsItem: Identifiable, Codable {
     
     let transName: String?
     let transCount: Double
