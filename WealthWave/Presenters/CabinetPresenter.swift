@@ -35,6 +35,9 @@ extension CabinetPresenter: CabinetPresenterProtocol {
                 AlertManager.showLogOutErrorAlert(on: self, with: error)
                 return
             }
+            
+            UserDefaults.standard.clear()
+            
             if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
                 sceneDelegate.checkAuthetification()
             }
@@ -43,3 +46,11 @@ extension CabinetPresenter: CabinetPresenterProtocol {
     
 }
 
+extension UserDefaults {
+    func clear() {
+        let dictionary = self.dictionaryRepresentation()
+        dictionary.keys.forEach { key in
+            self.removeObject(forKey: key)
+        }
+    }
+}
